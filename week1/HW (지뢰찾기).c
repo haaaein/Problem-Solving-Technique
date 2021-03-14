@@ -1,5 +1,3 @@
-//20181806 컴퓨터학과 여해인
-
 #include <stdio.h>
 #define X_VALUE 5
 #define Y_VALUE 5
