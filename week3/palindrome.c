@@ -11,7 +11,7 @@ int main(void)
     scanf("%d", &num);
     do
     {
-        if (num < 10)
+        if (num == calculateReverse(num))
         {
             sum = num;
             find = 1;

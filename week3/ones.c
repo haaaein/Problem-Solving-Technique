@@ -7,11 +7,16 @@ int main(void)
     int A, B = 1;
 
     scanf("%d", &A);
-    while (findOnes(A, B) == 0)
+    while (!findOnes(A, B))
     {
-        if ((A % 2 == 0) || (A % 5 == 0))
-            break;
         findOnes(A, B);
+
+        if (B < 0)
+        {
+            printf("Overflow\n");
+            break;
+        }
+
         B++;
     }
 }
@@ -23,7 +28,7 @@ int findOnes(int x, int y)
 
     while (result != 0)
     {
-        if (result % 10 != 1 || (x == y))
+        if (result % 10 != 1)
         {
             count = 0;
             break;
@@ -31,7 +36,6 @@ int findOnes(int x, int y)
 
         else
             result /= 10;
-        //printf("%d ", result);
         count++;
     }
 
